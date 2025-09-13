@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lucy thomas — Donate for Kids</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="IMG-20250913-WA0003.jpg" type="image/x-icon">
+</head>
+  <body>
+
+      <!-- NAV -->
+      <nav>
+        <div class="nav-inner">
+          <a class="logo" href="#home">  <span class="mark" aria-hidden="true"></span> Lucy thomas</a>
+
+          <ul>
+            <li><a href="#home" >Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <button class="cta-btn" onclick="document.querySelector('#donate').scrollIntoView({behavior:'smooth'})">Donate</button>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <h1>Together we give children a brighter future</h1>
+            <p class="muted">We provide food, education, and safe spaces for children. Your donation has direct, measurable impact. Transparent, trusted, global.</p>
+
+            <div class="hero-actions">
+              <button class="cta-btn" onclick="document.querySelector('#donate').scrollIntoView({behavior:'smooth'})">Donate Now</button>
+              <a class="muted" href="#programs" style="align-self:center; padding:8px 10px; text-decoration:none">See Programs →</a>
+            </div>
+
+            <div class="stats">
+              <div class="stat"><div class="num">12,800+</div><div class="lbl">Children helped</div></div>
+              <div class="stat"><div class="num">98%</div><div class="lbl">Funds to programs</div></div>
+            </div>
+          </div>
+
+          <div class="hero-card center" aria-hidden="true">
+            <!-- Unsplash random child photo; refreshes per load -->
+            <img class="img" src="IMG-20250913-WA0003.jpg" alt="Smiling children" height="470px" style="width:100%;border-radius:8px; max-width:420px; display:block">
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="container">
+        
+        <!-- <div  style="display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:center;"> -->
+          <div>
+            <h2 style="margin-top:0">About Lucy thomas</h2>
+            <p class="muted">Lucy thomas is an international non-profit dedicated to improving outcomes for children through nutrition, education, and community programs. We partner with local organizations and publish transparent reports so donors can see where money goes.</p>
+            <p class="muted" style="margin-top:8px"><strong>Trusted</strong> — independent audits and public program reports. <strong>Impact-focused</strong> — measurable goals and clear outcomes.</p>
+          </div>
+
+          <div>
+            <img src="kids learning.jpg" alt="Children learning" style="border-radius:10px;display:block;object-fit:cover">
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRAMS -->
+      <section id="programs" class="container">
+        <div class="section-title">
+          <h3 style="margin:0">Our Programs</h3>
+          <p class="muted" style="margin:0">Where donations go — transparent and impact-driven.</p>
+        </div>
+
+        <div class="grid programs">
+          <div class="prog-card">
+            <h3>Education</h3>
+            <p>School supplies, books, teacher support, and tuition assistance so children can stay in school.</p>
+          </div>
+          <div class="prog-card">
+            <h3>Nutrition</h3>
+            <p>Daily meals and nutrition programs to ensure healthy growth and better learning outcomes.</p>
+          </div>
+          <div class="prog-card">
+            <h3>Health</h3>
+            <p>Basic health screenings, vaccinations, and hygiene supplies to keep kids healthy.</p>
+          </div>
+          <div class="prog-card">
+            <h3>Safe Spaces</h3>
+            <p>Community centers and after-school programs that provide safe places to learn and play.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="container">
+        <div class="section-title">
+          <h3 style="margin:0">Gallery</h3>
+          <p class="muted" style="margin:0">Real moments</p>
+        </div>
+
+        <div class="grid gallery" id="gallery">
+          <img src="kids playing.jpg" alt="Children playing">
+          <img src="kids learning.jpg" alt="Children learning">
+          <img src="kids smiling.jpg" alt="Children smiling">
+          <img src="orphans-baja.jpg" alt="Kids group">
+        </div>
+      </section>
+
+      <!-- DONATE -->
+      <section id="donate" class="container">
+        <div class="section-title">
+          <h3 style="margin:0">Donate</h3>
+          <p class="muted" style="margin:0">Choose an amount and a preferred payment method.</p>
+        </div>
+
+        <div class="donation-wrap">
+          <!-- Left: options -->
+          <div class="donation-panel" aria-labelledby="donation-heading">
+            <h3 id="donation-heading">Select amount</h3>
+
+            <div class="amounts" role="list" aria-label="preset amounts">
+              <div class="amt" data-amount="10">$10</div>
+              <div class="amt" data-amount="25">$25</div>
+              <div class="amt" data-amount="50">$50</div>
+              <div class="amt" data-amount="100">$100</div>
+              <div class="amt" data-amount="250">$250</div>
+            </div>
+
+            <div class="field">
+              <label class="muted">Or enter custom amount (USD)</label>
+              <input id="customAmount" type="number" min="1" placeholder="25">
+            </div>
+
+            <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:8px">
+              <div class="muted">Donation total:</div>
+              <div style="font-weight:700;color:#04293a" id="totalDisplay">$0</div>
+            </div>
+
+            <div style="height:1px;background:rgba(2,6,23,0.04);margin:12px 0;border-radius:2px"></div>
+
+            <h4 style="margin:0 0 8px">Pay with</h4>
+            <div class="pay-grid">
+              <!-- PayPal — works with business email -->
+              <form class="pay-btn" id="paypalForm" action="https://www.paypal.com/donate" method="post" target="_blank" style="display:flex;flex-direction:column;justify-content:center">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="amount" id="paypalAmount" value="0">
+                <button type="submit" class="pay-btn" style="border:none;background:linear-gradient(90deg,var(--brand),var(--accent));color:white;padding:12px;border-radius:10px;font-weight:700">
+                  PayPal
+                  <span style="display:block;font-weight:500;font-size:0.86rem">Secure PayPal checkout</span>
+                </button>
+              </form>
+
+              <!-- Stripe — uses Stripe Payment Link or Checkout URL -->
+              <div class="pay-btn" id="stripeBtn" role="button" tabindex="0" title="Opens Stripe Checkout">
+                <span class="label">Card (Stripe)</span>
+                <span class="sub">Credit/debit, ApplePay, GooglePay</span>
+              </div>
+
+              <!-- Crypto -->
+              <!-- <div class="pay-btn" style="min-width:220px;">
+                <span class="label">Crypto</span>
+                <span class="sub" style="margin-bottom:8px">Send any amount to:</span>
+                <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+                  <div style="font-family:monospace;background:#f3f8fb;padding:6px 8px;border-radius:8px">BTC: <span id="btcAddr">REPLACE_BTC_ADDR</span></div>
+                  <button class="copy-btn" data-copy-target="btcAddr">Copy BTC</button>
+                  <div style="font-family:monospace;background:#f3f8fb;padding:6px 8px;border-radius:8px">ETH: <span id="ethAddr">REPLACE_ETH_ADDR</span></div>
+                  <button class="copy-btn" data-copy-target="ethAddr">Copy ETH</button>
+                </div>
+              </div> -->
+            </div>
+
+            <div class="progress-row">
+              <div style="display:flex;justify-content:space-between;font-size:0.95rem;margin-bottom:8px">
+                <div class="muted">Fundraising progress</div>
+                <div class="muted" id="progText">40% of goal</div>
+              </div>
+              <div class="progress" aria-hidden="true"><i style="width:40%"></i></div>
+            </div>
+
+          </div>
+
+          <!-- Right: impact & testimonial -->
+          <aside>
+            <div class="donation-panel">
+              <h3>Why your gift matters</h3>
+              <p class="muted">A single donation can provide school supplies, a week of nutritious meals, or fund medical screenings for a child. We work with vetted partners and publish reports every quarter.</p>
+
+              <div style="margin-top:16px">
+                <h4 style="margin:0 0 6px">Recent impact</h4>
+                <ul style="margin:0; padding-left:18px; color:var(--muted)">
+                  <li>5,000 books distributed in 2024</li>
+                  <li>2,200 children received health checks</li>
+                  <li>Community centers opened in 3 regions</li>
+                </ul>
+              </div>
+
+              <div style="margin-top:18px">
+                <h4 style="margin:0 0 8px">Donor testimonial</h4>
+                <blockquote style="margin:0;color:var(--muted);font-style:italic">"Giving through Lucy thomas felt transparent and meaningful. I received a report with photos within the month." — A donor</blockquote>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="container">
+        <div class="section-title" style="align-items:flex-start">
+          <div>
+            <h3 style="margin:0">Contact & Details</h3>
+            <p class="muted" style="margin:6px 0 0">For partnership inquiries, press, or donor reports, reach out below.</p>
+          </div>
+          <div style="text-align:right" class="muted">Registered: Lucy thomas • Global</div>
+        </div>
+
+        <div class="contact" style="margin-top:12px">
+          <div>
+            <p style="margin:0"><strong>Email</strong></p>
+            <p class="muted" style="margin:6px 0 0"> <a class="link_btn" href="mailto:lucythomas6633@gmail.com">lucythomas6633@gmail.com</a></p>
+          </div>
+          <div>
+            <p style="margin:0"><strong>Phone</strong></p>
+            <p class="muted" style="margin:6px 0 0"><a class="link_btn" href="https://www.whatsapp.com">+44 7508 230526 (whatsapp)</a></p>
+          </div>
+          <!-- <div>
+            <p style="margin:0"><strong>Address</strong></p>
+            <p class="muted" style="margin:6px 0 0">Global Office — New York, USA</p>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+          <div style="display:flex;gap:12px;align-items:center">
+            <span style="display:inline-block;width:44px;height:44px;background:linear-gradient(135deg,var(--brand),var(--accent));border-radius:10px"></span>
+            <div>
+              <div style="font-weight:700">Lucy thomas</div>
+              <div class="muted" style="font-size:0.92rem">Lucy thomas © 2025 • All rights reserved</div>
+            </div>
+          </div>
+
+          <div class="muted">Follow us on: <span style="font-weight:700;color:var(--brand)">
+            <br>
+           <a href="https://www.facebook.com" class="face"> Facebook</a>
+           <br>
+           <a href="https://www.instagram.com" class="gram"> instagram </a>
+          </span></div>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+  </body>
+</html>
